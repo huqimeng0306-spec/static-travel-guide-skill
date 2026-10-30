@@ -2,7 +2,6 @@
 
 装上 Skill → **说出行程和偏好** → Agent **自动生成同款前端网页** 并把 **链接** 发给你（手机也能开）。
 
-你不用自己复制文件夹，也不用改 `data.js`。
 
 | | |
 |---|---|
@@ -55,8 +54,6 @@ gh skill install aladdin0306/static-travel-guide-skill static-travel-guide --age
 ```bash
 gh skill install --help
 ```
-
-本 Skill 遵循 Agent Skills 目录规范，不依赖 Cursor；只有 `/add-plugin` 这一种安装方式是 Cursor 专用。
 
 ### 2. 描述行程；Agent 会先和你做规划前问答
 
