@@ -2,8 +2,6 @@
 
 装上 Skill → **说出行程和偏好** → Agent **自动生成同款前端网页** 并把 **链接** 发给你（手机也能开）。
 
-你不用自己复制文件夹，也不用改 `data.js`。
-
 | | |
 |---|---|
 | 仓库 | https://github.com/aladdin0306/static-travel-guide-skill |
@@ -18,45 +16,17 @@
 
 ### 1. 安装一次
 
-#### Cursor 插件
-
 ```text
 /add-plugin https://github.com/aladdin0306/static-travel-guide-skill
 ```
 
-#### 主流 Agent（`gh skill`）
-
-下面任选一条；`--scope user` 表示安装到用户级、所有项目可用。
+或：
 
 ```bash
-# Cursor
 gh skill install aladdin0306/static-travel-guide-skill static-travel-guide --agent cursor --scope user
-
-# Claude Code
-gh skill install aladdin0306/static-travel-guide-skill static-travel-guide --agent claude-code --scope user
-
-# OpenAI Codex
-gh skill install aladdin0306/static-travel-guide-skill static-travel-guide --agent codex --scope user
-
-# GitHub Copilot
-gh skill install aladdin0306/static-travel-guide-skill static-travel-guide --agent github-copilot --scope user
-
-# Gemini CLI
-gh skill install aladdin0306/static-travel-guide-skill static-travel-guide --agent gemini-cli --scope user
-
-# OpenCode
-gh skill install aladdin0306/static-travel-guide-skill static-travel-guide --agent opencode --scope user
 ```
 
-只想在当前项目使用时，把 `--scope user` 改成 `--scope project`。
-
-`gh skill` 还支持更多 Agent，可运行：
-
-```bash
-gh skill install --help
-```
-
-本 Skill 遵循 Agent Skills 目录规范，不依赖 Cursor；只有 `/add-plugin` 这一种安装方式是 Cursor 专用。
+也可用其他支持 Skill 的 Agent（改 `--agent`）。不必只用 Cursor。
 
 ### 2. 描述行程；Agent 会先和你做规划前问答
 
@@ -64,7 +34,7 @@ gh skill install --help
 
 > 2027 年 5 月北海道 5 天，两人，上海出发，节奏轻松，预算别太猛，不要太多购物店，要能订票跳转和地图打点，手机能打开。
 
-若信息不完整，Agent 必须先问清楚再排线路：
+若信息不完整，Agent会先问清楚再排线路：
 
 1. 从哪里出发（可以填多个城市）
 2. 去哪里
@@ -133,7 +103,7 @@ bash scripts/sync-template.sh ../travel-guides
 
 发布：保持 Demo Pages 可用；可选 `gh skill publish --tag v1.x.0`；可选 [Cursor Marketplace](https://cursor.com/marketplace/publish)。
 
-### 验收清单（Agent 交活前）
+### 验收清单
 
 1. 预约链接能打开  
 2. 地图有点  
